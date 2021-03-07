@@ -1,0 +1,13 @@
+.ChatBubble {
+    text-align: center;
+    height: auto;
+    padding: 4px;
+    width: fit-content;
+    padding: .75rem 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

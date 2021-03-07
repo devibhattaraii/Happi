@@ -1,24 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import LandingPage from './screens/LandingPage/LandingPage';
+import logo from './assets/logo.png'
+
+const Header = () => {
+  return (
+    <div class="main-header">
+      <nav class="header-nav">
+        <img class="logo" src={logo} alt="Happi"/>
+        <div className="header-links">
+          <a class="subtitle header-text" href="/">Home</a>
+          <a class="subtitle header-text" href="/About">About</a>
+        </div>
+      </nav>
+    </div>
+  )
+};
+
+const Footer = () => {
+  return (
+    <div class="main-footer">
+        <nav class="footer-nav">
+          <a class="subtitle" href="https://wics-hacks-2021-12166.devpost.com/">Devpost</a>
+          <a class="subtitle" href="#">Contact</a>
+        </nav>
+    </div>
+  )
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section class="container">
+      <Header/>
+      <LandingPage/>
+      <Footer/>
+    </section>
+
   );
 }
 
