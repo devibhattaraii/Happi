@@ -21,7 +21,7 @@ const Footer = () => {
     <div class="main-footer">
         <nav class="footer-nav">
           <a class="subtitle" href="https://wics-hacks-2021-12166.devpost.com/">Devpost</a>
-          <a class="subtitle" href="#">Contact</a>
+          <a class="subtitle" href="/">Contact</a>
         </nav>
     </div>
   )
@@ -29,11 +29,11 @@ const Footer = () => {
 
 function App() {
   return (
-    <section class="container">
+    <div class="container">
       <Header/>
         <LandingPage/>
       <Footer/>
-    </section>
+    </div>
 
   );
 }

@@ -86,10 +86,9 @@ const LandingPage = () => {
     return (
         <div class="container ">
             <img src={botImg} style={{height: 100}}/>
-            <div class="inner-container" >
+            <section class="inner-container" >
                 <MyForm />
-                
-            </div>
+            </section>
         </div>
     );
 }
