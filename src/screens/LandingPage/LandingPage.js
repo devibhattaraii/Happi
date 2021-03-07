@@ -5,6 +5,7 @@ import { Container, Row } from 'react-bootstrap';
 import MyForm from '../../components/MyForm';
 import ChatBubble from '../../components/ChatBubble';
 import Conditions from '../../components/Conditions';
+import Professionals from '../../components/Professionals';
 
 import './LandingPage.css';
 import botImg from '../../assets/chatbot.png';
@@ -87,23 +88,15 @@ const LandingPage = () => {
   };
 
   return (
-    <>
-      {/* <div className="container"> */}
+    <div
+      className="container-fluid mother-child"
+      style={{ backgroundColor: '#FFE3FE' }}
+    >
       {/* <img src={botImg} style={{height: 100}}/> */}
-      <Container fluid style={{ backgroundColor: '#FFE3FE' }}>
-        {/* <Row> */}
-        {/* <MyForm /> */}
-        {/* <div className="inner-container">
-          </div> */}
-        {/* </Row> */}
-        <Row>
-          <Conditions />
-        </Row>
-        {/* <div className="condition-container">
-        </div> */}
-      </Container>
-      {/* </div> */}
-    </>
+      <section className="inner-container">
+        <MyForm />
+      </section>
+    </div>
   );
 };
 

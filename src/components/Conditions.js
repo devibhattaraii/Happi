@@ -4,8 +4,8 @@ import './Conditions.css';
 
 const Conditions = () => {
   return (
-    <>
-      <Container fluid="md">
+    <Container fluid style={{ backgroundColor: '#FFE3FE' }}>
+      <Container fluid="md" style={{ backgroundColor: '#FFE3FE' }}>
         <p className="conditions-topic">Learn more about your Condition</p>
         <Row noGutters style={{ marginTop: 50, marginBottom: 50 }}>
           <Col lg={3} md={4} xs={6}>
@@ -43,7 +43,7 @@ const Conditions = () => {
           </Col>
         </Row>
       </Container>
-    </>
+    </Container>
   );
 };
 

@@ -1,25 +1,32 @@
-import './App.css';
+import { Switch, Route, BrowserRouter as Router, Link } from 'react-router-dom';
+
 import LandingPage from './screens/LandingPage/LandingPage';
+import Conditions from './components/Conditions';
+import Professionals from './components/Professionals';
+
+import './App.css';
 import logo from './assets/logo.png';
 
 const Header = () => {
   return (
     <div className="main-header">
       <nav className="header-nav">
-        <img className="logo" src={logo} alt="Happi" />
+        <Link to="/">
+          <img className="logo" src={logo} alt="Happi" />
+        </Link>
         <div className="header-links">
-          <a className="subtitle header-text" href="/">
+          <Link className="subtitle header-text" to="/">
             Home
-          </a>
-          <a className="subtitle header-text" href="/About">
-            Community
-          </a>
-          <a className="subtitle header-text" href="/About">
+          </Link>
+          <Link className="subtitle header-text" to="/conditions">
+            Conditions
+          </Link>
+          <Link className="subtitle header-text" to="/professionals">
             Professionals
-          </a>
-          <a className="subtitle header-text" href="/About">
+          </Link>
+          <Link className="subtitle header-text" to="/About">
             About
-          </a>
+          </Link>
         </div>
       </nav>
     </div>
@@ -46,13 +53,17 @@ const Footer = () => {
 
 function App() {
   return (
-    <>
-      {/* <div className="container"> */}
+    <Router>
       <Header />
-      <LandingPage />
+      <Switch>
+        <Route path="/professionals" component={Professionals} />
+        <Route path="/conditions" component={Conditions} />
+        <Route path="/" component={LandingPage} />
+      </Switch>
+      {/* <div className="container"> */}
       <Footer />
       {/* </div> */}
-    </>
+    </Router>
   );
 }
 

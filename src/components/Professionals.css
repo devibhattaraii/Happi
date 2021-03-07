@@ -1,0 +1,50 @@
+.professionals-topic {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+
+  color: #93329e;
+}
+
+.adams-image {
+  border-radius: 20px;
+  width: 185px;
+  height: 205px;
+  background-image: url('/src/assets/depression.png');
+  background-size: cover;
+}
+
+.march-image {
+  border-radius: 20px;
+  width: 185px;
+  height: 205px;
+  background-image: url('/src/assets/depression.png');
+  background-size: cover;
+}
+
+.cara-image {
+  border-radius: 20px;
+  width: 185px;
+  height: 205px;
+  background-image: url('/src/assets/depression.png');
+  background-size: cover;
+}
+
+.evans-image {
+  border-radius: 20px;
+  width: 185px;
+  height: 205px;
+  background-image: url('/src/assets/depression.png');
+  background-size: cover;
+}
+
+.freeman-image {
+  border-radius: 20px;
+  width: 185px;
+  height: 205px;
+  background-image: url('/src/assets/depression.png');
+  background-size: cover;
+}

@@ -46,3 +46,8 @@ html, article {
   height: 50%;
   border-radius: 1rem;
 }
+
+/* .mother-child {
+  background-image: url('/src/assets/mother-child.jpg');
+  background-size: contain;
+} */
