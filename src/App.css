@@ -1,4 +1,5 @@
-.main-header, .main-footer {
+.main-header,
+.main-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7,14 +8,14 @@
 }
 
 .main-header {
-  height: 80px;
+  height: 100px;
   background-color: white;
 }
 
 .main-footer {
   height: 100px;
   font-weight: bold;
-  background-color: #93329E;
+  background-color: #93329e;
 }
 
 .main-footer {
@@ -44,11 +45,11 @@
   margin: 0 auto;
   padding: 0;
   flex-grow: 1;
-  background-color: #FFE3FE;
+  background-color: #ffe3fe;
 }
 
 .logo {
-  height: 5rem;
+  height: 6rem;
 }
 
 .header-text {
@@ -58,7 +59,18 @@
 .header-nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+.header-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 1.5rem;
+  width: 89%;
 }

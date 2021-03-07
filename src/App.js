@@ -1,40 +1,56 @@
 import './App.css';
 import LandingPage from './screens/LandingPage/LandingPage';
-import logo from './assets/logo.png'
+import logo from './assets/logo.png';
 
 const Header = () => {
   return (
-    <div class="main-header">
-      <nav class="header-nav">
-        <img class="logo" src={logo} alt="Happi"/>
+    <div className="main-header">
+      <nav className="header-nav">
+        <img className="logo" src={logo} alt="Happi" />
         <div className="header-links">
-          <a class="subtitle header-text" href="/">Home</a>
-          <a class="subtitle header-text" href="/About">About</a>
+          <a className="subtitle header-text" href="/">
+            Home
+          </a>
+          <a className="subtitle header-text" href="/About">
+            Community
+          </a>
+          <a className="subtitle header-text" href="/About">
+            Professionals
+          </a>
+          <a className="subtitle header-text" href="/About">
+            About
+          </a>
         </div>
       </nav>
     </div>
-  )
+  );
 };
 
 const Footer = () => {
   return (
-    <div class="main-footer">
-        <nav class="footer-nav">
-          <a class="subtitle" href="https://wics-hacks-2021-12166.devpost.com/">Devpost</a>
-          <a class="subtitle" href="/">Contact</a>
-        </nav>
+    <div className="main-footer">
+      <nav className="footer-nav">
+        <a
+          className="subtitle"
+          href="https://wics-hacks-2021-12166.devpost.com/"
+        >
+          Devpost
+        </a>
+        <a className="subtitle" href="/">
+          Contact
+        </a>
+      </nav>
     </div>
-  )
+  );
 };
 
 function App() {
   return (
-    <div class="container">
-      <Header/>
-        <LandingPage/>
-      <Footer/>
+    <div className="container">
+      <Header />
+      <LandingPage />
+      <Footer />
     </div>
-
   );
 }
 
