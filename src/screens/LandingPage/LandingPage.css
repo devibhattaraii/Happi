@@ -1,7 +1,5 @@
 .inner-container {
     height: 70vh;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     margin: 1rem 1rem;
@@ -24,5 +22,12 @@
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+}
 
+.conversation {
+    width: 100vw;
+}
+
+.question {
+    width: 100vw;
 }

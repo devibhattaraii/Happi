@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
+import { Conversation, Select, Question, Option } from 'react-conversation-form';
 import ChatBubble from '../../components/ChatBubble';
 import './LandingPage.css';
+import botImg from '../../assets/chatbot.png'
 
 const CONVERSATION = [
     {
@@ -46,21 +48,22 @@ const LandingPage = () => {
         const msg = CONVERSATION[chatIndex];
         if(msg.next !== undefined && (msg.wait === false || trigger === true)){
             // console.log(true);
-            const interval = setTimeout(() => {
-                setMessageList([...messageList, CONVERSATION[msg.next]]);
-                setChatIndex(msg.next);
-            }, 1000);
+            setMessageList([...messageList, CONVERSATION[msg.next]]);
+            setChatIndex(msg.next);
         }
     };
 
     const userInputHander = (index, input) => {
-        switch(index){
-            case 2: {
-                setMessageList([...messageList, {text: input, next: 3}]);
-                break;
-            }
-            default: break;
-        }
+        console.log(input);
+        setMessageList([...messageList, {text: input, next: 3}]);
+
+        // switch(index){
+        //     case 2: {
+        //         setMessageList([...messageList, {text: input, next: 3}]);
+        //         break;
+        //     }
+        //     default: break;
+        // }
     }
 
     const handleKeypress = e => {
@@ -80,16 +83,29 @@ const LandingPage = () => {
     }
 
     return (
-        <div class="container">
-            <div class="inner-container">
-                <div class="message-container">
-                    <MessageList messages={messageList}/>
-                </div>
-                <input class="inputBox" type="text" name="name" placeholder="Enter your message"
-                    onChange={e => setUserInput(e.target.value)}
-                    onKeyPress={handleKeypress}
-                    value={userInput}
-                />
+        <div class="container ">
+            <img src={botImg} style={{height: 100}}/>
+            <div class="inner-container" >
+                <Conversation
+                    className="conversation"
+                    onSubmit={() => {}}
+                    chatOptions={{
+                        introText: 'Hi There! Welcome to our website! My name is Happi and I will be helping you today.',
+                        submitText: 'Take care!'
+                    }}
+                >
+                    <Question className="question" id="identifier" validation="^[a-zA-Z ]+$">
+                        What's your name?
+                    </Question>
+                    <Select id="feedbackType" question="Do you mind if I ask some questions to learn more about you?">
+                        <Option value="issue">Nope</Option>
+                        <Option value="typo">Go ahead</Option>
+                    </Select>
+                    <Select id="feedbackType" question="Great! What stage of pregnancy are you in?">
+                        <Option value="issue">Nope</Option>
+                        <Option value="typo">Go ahead</Option>
+                    </Select>
+                </Conversation>
             </div>
         </div>
     );
