@@ -12,3 +12,5 @@ We were able to implement a chatbot with a simple conversation flow thanks to Sp
 We learned about basic machine learning in Python and how it wasn't the right fit for our project, and we generally brushed up on React and design skills. Not all of us had used React before this project, so it was a good learning experience! 
 ## What's next for Happi
 The chatbot function needs to be improved as well as finish the layout for webpage design. We hope we can expand this to help ease the stress of motherhood!
+## Links
+[Devpost](https://devpost.com/software/happi-sb53pa)
