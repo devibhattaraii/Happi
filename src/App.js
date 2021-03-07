@@ -46,11 +46,13 @@ const Footer = () => {
 
 function App() {
   return (
-    <div className="container">
+    <>
+      {/* <div className="container"> */}
       <Header />
       <LandingPage />
       <Footer />
-    </div>
+      {/* </div> */}
+    </>
   );
 }
 

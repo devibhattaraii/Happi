@@ -1,6 +1,8 @@
 import React from 'react';
 import { ConversationalForm } from 'conversational-form';
 
+// import './MyForm.scss';
+
 export default class MyForm extends React.Component {
   constructor(props) {
     super(props);
@@ -113,7 +115,7 @@ export default class MyForm extends React.Component {
         theme: 'purple',
         submitCallback: this.submitCallback,
         preventAutoFocus: true,
-        loadExternalStyleSheet: true,
+        loadExternalStyleSheet: false,
         robotImage: 'https://i.imgur.com/ABkIEPH.png',
       },
       tags: this.formFields,
@@ -134,9 +136,9 @@ export default class MyForm extends React.Component {
 
   render() {
     return (
-      <div style={{ height: 100, backgroundColor: 'black' }}>
-        <div style={{ height: 100 }} ref={(ref) => (this.elem = ref)} />
-      </div>
+      // <div style={{ height: 100, backgroundColor: 'black' }}>
+      <div ref={(ref) => (this.elem = ref)} style={{ marginTop: 10 }} />
+      // </div>
     );
   }
 }

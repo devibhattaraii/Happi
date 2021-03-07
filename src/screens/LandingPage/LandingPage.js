@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Container, Row } from 'react-bootstrap';
 // import { Conversation, Select, Question, Option } from 'react-conversation-form';
+
 import MyForm from '../../components/MyForm';
 import ChatBubble from '../../components/ChatBubble';
+import Conditions from '../../components/Conditions';
+
 import './LandingPage.css';
 import botImg from '../../assets/chatbot.png';
 
@@ -83,12 +87,23 @@ const LandingPage = () => {
   };
 
   return (
-    <div class="container ">
+    <>
+      {/* <div className="container"> */}
       {/* <img src={botImg} style={{height: 100}}/> */}
-      <section class="inner-container">
-        <MyForm />
-      </section>
-    </div>
+      <Container fluid style={{ backgroundColor: '#FFE3FE' }}>
+        {/* <Row> */}
+        {/* <MyForm /> */}
+        {/* <div className="inner-container">
+          </div> */}
+        {/* </Row> */}
+        <Row>
+          <Conditions />
+        </Row>
+        {/* <div className="condition-container">
+        </div> */}
+      </Container>
+      {/* </div> */}
+    </>
   );
 };
 
