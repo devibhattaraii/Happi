@@ -1,5 +1,6 @@
 .inner-container {
     height: 70vh;
+    max-height: 70vh;
     align-items: center;
     justify-content: space-between;
     margin: 1rem 1rem;

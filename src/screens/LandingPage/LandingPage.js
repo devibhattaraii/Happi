@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import { Conversation, Select, Question, Option } from 'react-conversation-form';
+// import { Conversation, Select, Question, Option } from 'react-conversation-form';
+import MyForm from '../../components/MyForm';
 import ChatBubble from '../../components/ChatBubble';
 import './LandingPage.css';
 import botImg from '../../assets/chatbot.png'
@@ -86,31 +87,42 @@ const LandingPage = () => {
         <div class="container ">
             <img src={botImg} style={{height: 100}}/>
             <div class="inner-container" >
-                <Conversation
-                    className="conversation"
-                    onSubmit={() => {}}
-                    chatOptions={{
-                        introText: 'Hi There! Welcome to our website! My name is Happi and I will be helping you today.',
-                        submitText: 'Take care!'
-                    }}
-                >
-                    <Question className="question" id="identifier" validation="^[a-zA-Z ]+$">
-                        What's your name?
-                    </Question>
-                    <Select id="yes" question="Do you mind if I ask some questions to learn more about you?">
-                        <Option value="issue">Nope</Option>
-                        <Option value="typo">Go ahead</Option>
-                    </Select>
-                    <Select id="pregnancy" question="Great! What stage of pregnancy are you in?">
-                        <Option value="issue">First trimester (1-12 weeks)</Option>
-                        <Option value="issue">Second trimester (13-27 weeks)</Option>
-                        <Option value="issue">Third trimester (28-40 weeks)</Option>
-                        <Option value="issue">Postpartum</Option>
-                    </Select>
-                </Conversation>
+                <MyForm />
+                
             </div>
         </div>
     );
 }
 
 export default LandingPage;
+
+/* <Conversation
+                    className="conversation"
+                    onSubmit={() => {}}
+                    chatOptions={{
+                        robotResponseTime: 1000,
+                        introText: 'Hi There! Welcome to our website! My name is Happi and I will be helping you today.',
+                        submitText: 'Scroll down to see results that might help you!'
+                    }}
+                >
+                    <Question className="question" id="name" validation="^[a-zA-Z ]+$">
+                        What's your name?
+                    </Question>
+                    <Select id="yes" question="Do you mind if I ask some questions to learn more about you?">
+                        <Option value="yes">Nope</Option>
+                        <Option value="yes">Go ahead</Option>
+                    </Select>
+                    <Select id="pregnancy" question="Great! What stage of pregnancy are you in?">
+                        <Option value="first">First trimester (1-12 weeks)</Option>
+                        <Option value="second">Second trimester (13-27 weeks)</Option>
+                        <Option value="third">Third trimester (28-40 weeks)</Option>
+                        <Option value="post">Postpartum</Option>
+                    </Select>
+                    <Select id="mood" question="I see. How are you feeling today?">
+                        <Option value="happy">:D</Option>
+                        <Option value="okay">:)</Option>
+                        <Option value="meh">:|</Option>
+                        <Option value="sad">:(</Option>
+                        <Option value="depressed">:C</Option>
+                    </Select>
+                </Conversation> */

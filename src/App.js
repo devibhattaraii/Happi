@@ -31,7 +31,9 @@ function App() {
   return (
     <section class="container">
       <Header/>
-      <LandingPage/>
+      <div>
+        <LandingPage/>
+      </div>
       <Footer/>
     </section>
 
