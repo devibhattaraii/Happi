@@ -28,7 +28,7 @@ export default class MyForm extends React.Component {
         theme: 'blue',
         submitCallback: this.submitCallback,
         preventAutoFocus: true,
-        // loadExternalStyleSheet: false
+        loadExternalStyleSheet: true
       },
       tags: this.formFields
     });
@@ -38,7 +38,7 @@ export default class MyForm extends React.Component {
   submitCallback() {
     var formDataSerialized = this.cf.getFormData(true);
     console.log("Formdata, obj:", formDataSerialized);
-    this.cf.addRobotChatResponse("You are done. Check the dev console for form data output.")
+    this.cf.addRobotChatResponse("Y")
   }
   
   render() {
