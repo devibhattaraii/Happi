@@ -97,13 +97,15 @@ const LandingPage = () => {
                     <Question className="question" id="identifier" validation="^[a-zA-Z ]+$">
                         What's your name?
                     </Question>
-                    <Select id="feedbackType" question="Do you mind if I ask some questions to learn more about you?">
+                    <Select id="yes" question="Do you mind if I ask some questions to learn more about you?">
                         <Option value="issue">Nope</Option>
                         <Option value="typo">Go ahead</Option>
                     </Select>
-                    <Select id="feedbackType" question="Great! What stage of pregnancy are you in?">
-                        <Option value="issue">Nope</Option>
-                        <Option value="typo">Go ahead</Option>
+                    <Select id="pregnancy" question="Great! What stage of pregnancy are you in?">
+                        <Option value="issue">First trimester (1-12 weeks)</Option>
+                        <Option value="issue">Second trimester (13-27 weeks)</Option>
+                        <Option value="issue">Third trimester (28-40 weeks)</Option>
+                        <Option value="issue">Postpartum</Option>
                     </Select>
                 </Conversation>
             </div>
