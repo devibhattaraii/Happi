@@ -1,10 +1,18 @@
 import { Col, Container, Row } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 
 import './Conditions.css';
 
 const Conditions = () => {
+  const name = useSelector(state => state.user.name);
+  const mood = useSelector(state => state.user.mood);
+  const pregnancy = useSelector(state => state.user.pregnancy);
+  const reason = useSelector(state => state.user.reason);
+
   return (
     <Container fluid style={{ backgroundColor: '#FFE3FE' }}>
+      <div>Hello, {name}!</div>
+      <div>You feel {mood} because "{reason}"</div>
       <Container fluid="md" style={{ backgroundColor: '#FFE3FE' }}>
         <p className="conditions-topic">Learn more about your Condition</p>
         <Row noGutters style={{ marginTop: 50, marginBottom: 50 }}>

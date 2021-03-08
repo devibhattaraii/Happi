@@ -1,7 +1,9 @@
 import React from 'react';
 import { ConversationalForm } from 'conversational-form';
+import { connect } from 'react-redux';
+import { setName, setMood, setPregnancy, setReason } from '../store/userSlice'
 
-export default class MyForm extends React.Component {
+class MyForm extends React.Component {
   constructor(props) {
     super(props);
     this.formFields = [
@@ -127,8 +129,13 @@ export default class MyForm extends React.Component {
   submitCallback() {
     var formDataSerialized = this.cf.getFormData(true);
     console.log('Formdata, obj:', formDataSerialized);
+    console.log(formDataSerialized.pregnancy[0]);
+    this.props.setName(formDataSerialized.name);
+    this.props.setMood(formDataSerialized.mood[0]);
+    this.props.setReason(formDataSerialized.reason);
+    this.props.setPregnancy(formDataSerialized.pregnancy[0]);
     this.cf.addRobotChatResponse(
-      'Thanks for telling me! I have some helpful results below for you.'
+      'Thanks for telling me! I have some helpful results for you, go to the Conditions page to see!'
     );
   }
 
@@ -140,3 +147,13 @@ export default class MyForm extends React.Component {
     );
   }
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+      setName: (name) => dispatch(setName(name)),
+      setMood: (name) => dispatch(setMood(name)),
+      setPregnancy: (name) => dispatch(setPregnancy(name)),
+      setReason: (name) => dispatch(setReason(name)),
+  }
+};
+export default connect(null, mapDispatchToProps)(MyForm);
