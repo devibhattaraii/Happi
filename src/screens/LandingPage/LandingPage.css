@@ -1,0 +1,53 @@
+.inner-container {
+  display: grid;
+  height: 70vh;
+  max-height: 70vh;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+}
+
+.inputBox {
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  height: 4rem;
+  width: 60vw;
+  padding-left: 1rem;
+}
+
+.message-container {
+  margin: 0 1rem;
+  margin-bottom: 1rem;
+  height: 100%;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.conversation {
+  width: 100vw;
+}
+
+.question {
+  width: 100vw;
+}
+/* 
+html, article {
+    height: 90%;
+    width: 96%;
+    background: #eee;
+    margin: 10px auto;
+  } */
+
+.conversational-form {
+  width: 80%;
+  height: 50%;
+  border-radius: 1rem;
+}
+
+/* .mother-child {
+  background-image: url('/src/assets/mother-child.jpg');
+  background-size: contain;
+} */
